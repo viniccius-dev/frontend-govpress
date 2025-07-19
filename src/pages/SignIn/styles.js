@@ -26,7 +26,7 @@ export const Form = styled.form`
     }
 
     > img {
-        width: 85%;
+        width: 55%;
         min-width: 18rem;
         object-fit: cover;
     }
@@ -37,6 +37,7 @@ export const Form = styled.form`
 
         > img {
             width: auto;
+            max-width: 300px;
             margin: 0;
         }
     }

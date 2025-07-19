@@ -61,4 +61,15 @@ export default createGlobalStyle`
         margin-right: 5px;
         border: none;
     }
+
+    input::-ms-reveal,
+    .no-visibility-toggle::-ms-clear {
+        display: none;
+    }
+
+    input::-webkit-visibility-toggle,
+    input::-webkit-clear-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 `;
