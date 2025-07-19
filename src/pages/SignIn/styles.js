@@ -31,6 +31,10 @@ export const Form = styled.form`
         object-fit: cover;
     }
 
+    > button {
+        max-width: 300px;
+    }
+
     @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
         padding: 0 8.5rem;
         width: auto;

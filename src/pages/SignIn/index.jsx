@@ -4,8 +4,7 @@ import { FormControl, InputLabel, OutlinedInput, InputAdornment, IconButton } fr
 import { Visibility, VisibilityOff } from '@mui/icons-material'
 
 // import { useAuth } from '../../hooks/auth';
-// import { Input } from '../../components/Input';
-// import { Button } from '../../components/Button';
+import { Button } from '../../components/Button';
 import logo from '../../assets/logo.png';
 
 import { Container, Form, Background } from './styles';
@@ -40,7 +39,7 @@ export function SignIn() {
                 <img src={logo} />
                 <h2>Acesse sua conta</h2>
 
-                <FormControl sx={{ m: 1, width: '300px' }} variant="outlined">
+                <FormControl sx={{ my: 1, width: '300px' }} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password">E-mail</InputLabel>
                     <OutlinedInput
                         id="outlined-adornment-password"
@@ -54,7 +53,7 @@ export function SignIn() {
                     />
                 </FormControl>
 
-                <FormControl sx={{ m: 1, width: '300px' }} variant="outlined">
+                <FormControl sx={{ my: 1, width: '300px' }} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password">Senha</InputLabel>
                     <OutlinedInput
                         id="outlined-adornment-password"
@@ -93,6 +92,8 @@ export function SignIn() {
                 /> */}
                 
                 {/* <Button title="Entrar" onClick={handleSignIn} loading={loading} /> */}
+                
+                <Button title="Entrar" loading={loading} />
             </Form>
             <Background />
         </Container>
