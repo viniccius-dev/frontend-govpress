@@ -5,9 +5,11 @@ import { BiDesktop } from 'react-icons/bi';
 import { TbLogout2, TbNetwork } from 'react-icons/tb';
 import { FaCodeBranch, FaUsers, FaUser } from 'react-icons/fa';
 import { MdAssignment, MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import { FaChartPie } from "react-icons/fa6";
 
-import { Container, Header, Title, Button, Nav, Footer, Role } from './styles';
+import { Container, Header, Button, Nav, Footer, Role } from './styles';
 import imgAvatarPlaceholder from "../../assets/avatar_placeholder.svg";
+import logo from '../../assets/logo-dark.png';
 
 export function SideMenu({ menuIsOpen, onCloseMenu, onLinkClick }) {
     const navigation = useNavigate();
@@ -95,7 +97,7 @@ export function SideMenu({ menuIsOpen, onCloseMenu, onLinkClick }) {
     return (
         <Container data-menu-is-open={menuIsOpen}>
             <Header>
-                <Title><BiDesktop /> Painel Administrativo</Title>
+                <img src={logo} />
 
                 {menuIsOpen && (
                     <Button>
@@ -105,13 +107,22 @@ export function SideMenu({ menuIsOpen, onCloseMenu, onLinkClick }) {
             </Header>
 
             <Nav>
+
+                <a
+                    data-menu-active={activeLink === "/panel"}
+                    onClick={() => handleLinkClick("/panel")}
+                >
+                    <FaChartPie />
+                    Painel Administrativo
+                </a>
+
                 <a 
                     className="bidsButton"
                     data-filters-active={filtersVisible}
                     style={{cursor: "default"}}
-                    onClick={() => handleLinkClick("/")}
+                    onClick={() => handleLinkClick("/publications")}
                     data-menu-active={
-                        activeLink === "/" ||
+                        activeLink === "/publications" ||
                         activeLink === "/create-publication" || 
                         activeLink === "/details" ||
                         activeLink === "/edit-publication"
@@ -119,7 +130,13 @@ export function SideMenu({ menuIsOpen, onCloseMenu, onLinkClick }) {
                 >
                     <div onClick={toggleFilters} style={{cursor: "pointer"}}>
                             <MdAssignment /> Publicações {" "}
-                            <MdOutlineKeyboardArrowDown data-filters-active={filtersVisible} />
+                            {
+                                activeLink === "/publications" ||
+                                activeLink === "/create-publication" || 
+                                activeLink === "/details" ||
+                                activeLink === "/edit-publication" &&
+                                <MdOutlineKeyboardArrowDown data-filters-active={filtersVisible} />
+                            }
                     </div> 
                     <div className="bidsFilters">
                         <ul>

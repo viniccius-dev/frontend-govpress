@@ -31,16 +31,16 @@ export const Container = styled.aside`
 export const Header = styled.header`
     display: flex;
     justify-content: space-between;
-    padding: 32px 24px;
+    padding: 24px;
     border-bottom: ${({ theme }) => `1px solid ${theme.COLORS.BROWN_200}`};
-`;
 
-export const Title = styled.h2`
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    color: ${({ theme }) => theme.COLORS.BLUE_100};
-    font-size: 1.5rem;
+    img {
+        width: 190px;
+    }
+    
+    @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+        justify-content: center;
+    }
 `;
 
 export const Button = styled.button`
