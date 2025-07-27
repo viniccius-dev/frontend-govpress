@@ -15,6 +15,7 @@ const xThemeComponents = {
 
 import { Container } from "./styles";
 import ChartDomainByStorage from "../../components/ChartDomainByStorage";
+import PublicationCharBar from "../../components/PublicationBarChar";
 
 export function Panel(props) {
     return (
@@ -80,7 +81,9 @@ export function Panel(props) {
 
                             </Box>
 
-                            <ChartDomainByStorage />
+                            {/* <ChartDomainByStorage /> */}
+
+                            <PublicationCharBar />
 
                         </Stack>
 

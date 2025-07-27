@@ -11,30 +11,30 @@ import Stack from '@mui/material/Stack';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
 const data = [
-  { label: 'India', value: 50000 },
-  { label: 'USA', value: 35000 },
-  { label: 'Brazil', value: 10000 },
-  { label: 'Other', value: 5000 },
+  { label: 'Cachoeira Dourada', value: 50000 },
+  { label: 'Perdizes', value: 35000 },
+  { label: 'Eunápolis', value: 10000 },
+  { label: 'Outros', value: 5000 },
 ];
 
-const countries = [
+const domains = [
   {
-    name: 'India',
+    name: 'Cachoeira Dourada',
     value: 50,
     color: 'hsl(220, 25%, 65%)',
   },
   {
-    name: 'USA',
+    name: 'Perdizes',
     value: 35,
     color: 'hsl(220, 25%, 45%)',
   },
   {
-    name: 'Brazil',
+    name: 'Eunápolis',
     value: 10,
     color: 'hsl(220, 25%, 30%)',
   },
   {
-    name: 'Other',
+    name: 'Outros',
     value: 5,
     color: 'hsl(220, 25%, 20%)',
   },
@@ -142,7 +142,7 @@ export default function ChartDomainByStorage() {
             <PieCenterLabel primaryText="98.5K" secondaryText="Total" />
           </PieChart>
         </Box>
-        {countries.map((country, index) => (
+        {domains.map((country, index) => (
           <Stack
             key={index}
             direction="row"
