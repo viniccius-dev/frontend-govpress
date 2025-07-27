@@ -18,7 +18,7 @@ export default createGlobalStyle`
     }
 
     body {
-        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_100};
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_100}; 
         color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
         --webkit-font-smoothing: antialiased;
@@ -37,6 +37,10 @@ export default createGlobalStyle`
 
     button:hover, a:hover {
         filter: brightness(0.9);
+    }
+
+    img {
+        user-select: none;
     }
 
     ::-webkit-scrollbar {
