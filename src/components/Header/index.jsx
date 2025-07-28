@@ -25,11 +25,11 @@ export function Header({ title, onOpenMenu }) {
             <h1>{title}</h1>
 
             {
-                title !== "Publicações"
-                ?
-                <Button icon={FaArrowLeft} title="Voltar" onClick={handleBack} />
-                :
-                <Button icon={FaPlus} title="Adicionar Publicação" onClick={handleLinkClick} />
+                title !== "Painel Administrativo" && (
+                    title !== "Publicações"
+                        ? <Button icon={FaArrowLeft} title="Voltar" onClick={handleBack} />
+                        : <Button icon={FaPlus} title="Adicionar Publicação" onClick={handleLinkClick} />
+                )
             }
             
         </Container>

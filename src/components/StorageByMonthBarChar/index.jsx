@@ -7,7 +7,7 @@ import Stack from '@mui/material/Stack';
 import { BarChart } from '@mui/x-charts/BarChart';
 import { useTheme } from '@mui/material/styles';
 
-export default function PublicationBarChar() {
+export default function StorageByMonthBarChar() {
   const theme = useTheme();
   const colorPalette = [
     (theme.vars || theme).palette.primary.dark,
@@ -18,7 +18,7 @@ export default function PublicationBarChar() {
   return (
     <Card variant="outlined" sx={{ width: '100%' }}>
       <CardContent>
-        <Typography component="h2" variant="subtitle2" gutterBottom>
+        <Typography sx={{ fontWeight: 'bold' }} component="h2" variant="subtitle2" gutterBottom>
           Armazenamento Atual
         </Typography>
         <Stack sx={{ justifyContent: 'space-between' }}>
@@ -46,7 +46,7 @@ export default function PublicationBarChar() {
             {
               scaleType: 'band',
               categoryGapRatio: 0.5,
-              data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+              data: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul'],
             },
           ]}
           series={[
@@ -57,8 +57,8 @@ export default function PublicationBarChar() {
               stack: 'A',
             }
           ]}
-          height={250}
-          margin={{ left: 50, right: 0, top: 20, bottom: 20 }}
+          height={200}
+          margin={{ left: -20, right: 0, top: 20, bottom: 20 }}
           grid={{ horizontal: true }}
           slotProps={{
             legend: {

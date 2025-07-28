@@ -2,9 +2,34 @@ import styled from 'styled-components';
 import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 export const Container = styled.div`
-    padding: 0 1.5rem;
+    padding: 1rem 1.5rem 7.5rem;
     overflow-y: auto;
     grid-area: content;
+
+    display: grid;
+    grid-template-columns: 530px auto;
+    grid-template-rows: auto 250px 240px;
+    grid-template-areas:
+        "selectDomain selectDomain"
+        "gaugeChars linearProgressChar"
+        "barChar linearProgressChar";
+    gap: 15px;
+
+    .selectDomain {
+        grid-area: selectDomain;
+    }
+
+    .gaugeChars {
+        grid-area: gaugeChars;
+    }
+
+    .barChar {
+        grid-area: barChar;
+    }
+
+    .linearProgressChar {
+        grid-area: linearProgressChar;
+    }
 `;
 
 export const W50 = styled.div`

@@ -135,11 +135,11 @@ export default function ChartDomainByStorage() {
                 highlightScope: { faded: 'global', highlighted: 'item' },
               },
             ]}
-            height={260}
+            height={348}
             width={260}
             hideLegend
           >
-            <PieCenterLabel primaryText="98.5K" secondaryText="Total" />
+            <PieCenterLabel primaryText="98.5 GB" secondaryText="Total" />
           </PieChart>
         </Box>
         {domains.map((country, index) => (
