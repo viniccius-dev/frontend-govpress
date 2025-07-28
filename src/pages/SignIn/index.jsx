@@ -40,10 +40,11 @@ export function SignIn() {
                 <h2>Acesse sua conta</h2>
 
                 <FormControl sx={{ my: 1, width: '300px' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">E-mail</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-email">E-mail</InputLabel>
                     <OutlinedInput
-                        id="outlined-adornment-password"
+                        id="outlined-adornment-email"
                         type="email"
+                        sx={{ backgroundColor: '#E8F0FE' }}
                         endAdornment={
                         <InputAdornment position="end">
                             <FiMail size={20} />
@@ -58,16 +59,18 @@ export function SignIn() {
                     <OutlinedInput
                         id="outlined-adornment-password"
                         type={showPassword ? 'text' : 'password'}
+                        sx={{ backgroundColor: '#E8F0FE' }}
                         endAdornment={
                         <InputAdornment position="end">
                             <IconButton
-                            aria-label={
-                                showPassword ? 'Ocultar a senha' : 'Exibir a senha'
-                            }
-                            onClick={handleClickShowPassword}
-                            onMouseDown={handleMouseDownPassword}
-                            onMouseUp={handleMouseUpPassword}
-                            edge="end"
+                                aria-label={
+                                    showPassword ? 'Ocultar a senha' : 'Exibir a senha'
+                                }
+                                onClick={handleClickShowPassword}
+                                onMouseDown={handleMouseDownPassword}
+                                onMouseUp={handleMouseUpPassword}
+                                sx={{ border: 'none' }}
+                                edge="end"
                             >
                             {showPassword ? <VisibilityOff /> : <Visibility />}
                             </IconButton>

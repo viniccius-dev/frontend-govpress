@@ -1,3 +1,5 @@
+import { Background } from "../pages/SignIn/styles";
+
 export const muiTheme = {
   MuiMenuItem: {
     styleOverrides: {
@@ -21,14 +23,8 @@ export const muiTheme = {
   MuiOutlinedInput: {
     styleOverrides: {
       root: {
-        '& .MuiOutlinedInput-notchedOutline': {
-          border: 'none',
-        },
-        '&:hover .MuiOutlinedInput-notchedOutline': {
-          border: 'none',
-        },
         '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-          border: 'none',
+          border: '2px solid #737373'
         },
         '&.Mui-focused': {
           boxShadow: 'none',
