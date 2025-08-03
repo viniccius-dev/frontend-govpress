@@ -6,13 +6,8 @@ export const Container = styled.div`
     overflow-y: auto;
     grid-area: content;
 
-    display: grid;
-    grid-template-columns: 530px auto;
-    grid-template-rows: auto 250px 240px;
-    grid-template-areas:
-        "selectDomain selectDomain"
-        "gaugeChars linearProgressChar"
-        "barChar linearProgressChar";
+    display: flex;
+    flex-direction: column;
     gap: 15px;
 
     .selectDomain {
@@ -21,6 +16,8 @@ export const Container = styled.div`
 
     .gaugeChars {
         grid-area: gaugeChars;
+        display: flex;
+        justify-content: space-around;
     }
 
     .barChar {
@@ -29,6 +26,16 @@ export const Container = styled.div`
 
     .linearProgressChar {
         grid-area: linearProgressChar;
+    }
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
+        display: grid;
+        grid-template-columns: 530px auto;
+        grid-template-rows: auto 250px 240px;
+        grid-template-areas:
+            "selectDomain selectDomain"
+            "gaugeChars linearProgressChar"
+            "barChar linearProgressChar";
     }
 `;
 

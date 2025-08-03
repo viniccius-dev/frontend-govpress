@@ -54,7 +54,7 @@ export function Panel(props) {
                             value={75}
                             startAngle={-110}
                             endAngle={110}
-                            width={250}
+                            width={240}
                             height={200}
                             text={`${75} / 100`} // custom text
                             sx={{
@@ -78,7 +78,7 @@ export function Panel(props) {
                             value={1/3*100}
                             startAngle={-110}
                             endAngle={110}
-                            width={250}
+                            width={240}
                             height={200}
                             text={`${1} / 3`} // custom text
                             sx={{

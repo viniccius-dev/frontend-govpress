@@ -24,7 +24,7 @@ export const muiTheme = {
     styleOverrides: {
       root: {
         '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-          border: '2px solid #737373'
+          border: '1px solid #737373'
         },
         '&.Mui-focused': {
           boxShadow: 'none',
